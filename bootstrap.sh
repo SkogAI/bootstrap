@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # bootstrap.sh — One-liner bootstrap for fresh Arch Linux installs
-# Usage: curl -fsSL https://raw.githubusercontent.com/SkogAI/bootstrap/main/bootstrap.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/SkogAI/bootstrap/master/bootstrap.sh | bash
 #
 # Phases:
 #   1. Foundation — install base packages + yay (no auth, no input)

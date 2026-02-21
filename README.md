@@ -5,7 +5,7 @@ One-liner bootstrap for fresh Arch Linux installs. Goes from archinstall to priv
 ## Usage
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/SkogAI/bootstrap/main/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/SkogAI/bootstrap/master/bootstrap.sh | bash
 ```
 
 ### What it does
@@ -19,7 +19,7 @@ curl -fsSL https://raw.githubusercontent.com/SkogAI/bootstrap/main/bootstrap.sh 
 Preview what would happen without making changes:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/SkogAI/bootstrap/main/bootstrap.sh | DRY_RUN=true bash
+curl -fsSL https://raw.githubusercontent.com/SkogAI/bootstrap/master/bootstrap.sh | DRY_RUN=true bash
 ```
 
 ### Headless / CI
