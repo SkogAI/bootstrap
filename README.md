@@ -25,7 +25,7 @@ curl -fsSL https://raw.githubusercontent.com/SkogAI/bootstrap/master/bootstrap.s
 ### Headless / CI
 
 ```bash
-VAULT_PASSWORD="mypassword" bash bootstrap.sh
+SKOGAI_BECOME_PASSWORD="mypassword" bash bootstrap.sh
 ```
 
 ## Vault management
