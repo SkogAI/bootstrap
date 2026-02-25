@@ -7,17 +7,16 @@ log() { printf '\033[0;32m[+]\033[0m %s\n' "$*"; }
 
 # Install minimum deps
 log "Installing base packages..."
-sudo -A pacman -S --needed --noconfirm github-cli uv ansible-core git
+sudo -A pacman -S --needed --noconfirm github-cli uv git
 
 # Setup ansible via uv
 log "Setting up ansible..."
-uv venv --seed --clear
-source .venv/bin/activate
 uv tool install ansible-core
 
 # Auth gh
 log "Authenticating gh..."
 ansible-vault view ./pat.vault | gh auth login --with-token
+gh auth setup-git
 gh auth status
 
 # Install ansible collections and run playbook
