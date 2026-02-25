@@ -1,4 +1,5 @@
 pat
+.venv
 *.swp
 *.swo
 *~
