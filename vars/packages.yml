@@ -1,0 +1,50 @@
+---
+# Packages from pacman
+packages:
+  - ansible
+  - ansible-core
+  - base
+  - base-devel
+  - bat
+  - direnv
+  - dunst
+  - feh
+  - firefox
+  - fzf
+  - git
+  - github-cli
+  - kitty
+  - less
+  - just
+  - mandoc
+  - ncspot
+  - network-manager-applet
+  - networkmanager
+  - nvm
+  - picom
+  - python-uv
+  - ripgrep
+  - tree
+  - unzip
+  - uv
+  - wget
+  - wireplumber
+  - xclip
+  - xdotool
+  - jq
+  - fd
+  - zip
+  - unzip
+  - zoxide
+  - zsh
+
+# Packages from AUR via yay
+aur_packages:
+  - claude-code
+  - google-chrome
+  - neovim-nightly
+  - pwvucontrol
+  - diff-so-fancy
+  - vesktop
+  - lazydocker
+  - lazygit
