@@ -1,5 +1,4 @@
 ---
-# Bootstrap playbook - basic setup
 - name: Bootstrap Arch Linux
   hosts: all
 
@@ -9,5 +8,6 @@
 
   roles:
     - role: packages
-      tags: [packages, install]
-
+      tags: [packages]
+    - role: secrets
+      tags: [secrets]
