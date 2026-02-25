@@ -7,7 +7,7 @@ log() { printf '\033[0;32m[+]\033[0m %s\n' "$*"; }
 
 # Install minimum deps
 log "Installing base packages..."
-sudo pacman -S --needed --noconfirm github-cli uv ansible-core git
+sudo -A pacman -S --needed --noconfirm github-cli uv ansible-core git
 
 # Setup ansible via uv
 log "Setting up ansible..."

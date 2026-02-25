@@ -1,6 +1,7 @@
 ---
 # Packages from pacman
 packages:
+  - x11-ssh-askpass
   - ansible
   - ansible-core
   - base
