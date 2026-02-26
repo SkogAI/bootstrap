@@ -15,3 +15,5 @@
     name: "{{ packages }}"
     state: present
 
+- name: Install AUR packages
+  ansible.builtin.include_tasks: aur_packages.yml

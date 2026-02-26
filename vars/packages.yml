@@ -1,6 +1,13 @@
 ---
 # Packages from pacman
 packages:
+  - picom
+  - redshift
+  - dex
+  - dunst
+  - xss-lock
+  - feh
+  - btop
   - dolt
   - yq
   - x11-ssh-askpass
@@ -42,7 +49,8 @@ packages:
   - zoxide
   - tmux
   - zsh
-
+  - pinentry
+  - gnupg
 
 # Packages from AUR via yay
 aur_packages:
@@ -50,10 +58,18 @@ aur_packages:
   - google-chrome
   - neovim-nightly
   - pwvucontrol
-  - diff-so-fancy
   - fabric-ai
+  - xdotool
+  - nvm
   - vesktop
   - lazydocker
   - lazygit
   - beads-git
+  - zed
   - lazybeads-git
+  - rbw
+  - rofi
+  - rofi-rbw
+  - bitwarden-systemd
+  - brave
+  - brave-extension-bitwarden-git

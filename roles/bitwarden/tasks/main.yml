@@ -1,0 +1,69 @@
+---
+# Setup bitwarden-cli tools (rbw, rbw-rofi)
+# NOTE: rbw is a CLI tool, not a daemon. User must manually log in after bootstrap.
+
+- name: Ensure pinentry and gnupg are installed (required for rbw login)
+  ansible.builtin.pacman:
+    name:
+      - pinentry
+      - gnupg
+    state: present
+
+- name: Create .config/rbw directory
+  ansible.builtin.file:
+    path: "{{ ansible_user_dir }}/.config/rbw"
+    state: directory
+    mode: "0700"
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
+
+- name: Create rbw config (without email - user must login first)
+  ansible.builtin.copy:
+    content: |
+      # rbw configuration
+      # NOTE: You must run 'rbw login' to initialize this config with your email
+      base_url = "https://vault.bitwarden.com"
+      lock_timeout = 3600
+      sync_interval = 3600
+    dest: "{{ ansible_user_dir }}/.config/rbw/config.toml"
+    mode: "0600"
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
+
+- name: Create .local/share/rbw directory for cache
+  ansible.builtin.file:
+    path: "{{ ansible_user_dir }}/.local/share/rbw"
+    state: directory
+    mode: "0700"
+    owner: "{{ user_name }}"
+    group: "{{ user_name }}"
+
+- name: Display bitwarden setup information
+  ansible.builtin.debug:
+    msg:
+      - "================================"
+      - "Bitwarden CLI Setup Complete!"
+      - "================================"
+      - ""
+      - "IMPORTANT: Next steps (manual, IN THIS ORDER):"
+      - "1. Register this device:"
+      - "   rbw register"
+      - "2. Login to Bitwarden:"
+      - "   rbw login"
+      - "3. Sync your vault:"
+      - "   rbw sync"
+      - "4. Verify it works:"
+      - "   rbw list"
+      - ""
+      - "Usage:"
+      - "- rbw list              - List all vault entries"
+      - "- rbw get '<name>'      - Get password for entry"
+      - "- rbw sync              - Manually sync vault"
+      - "- rbw-rofi              - Launch rofi password selector"
+      - "- rbw lock              - Lock the vault"
+      - ""
+      - "Installed packages:"
+      - "- rbw (AUR)             - Rust Bitwarden CLI client"
+      - "- rofi-rbw (AUR)        - Rofi integration"
+      - "- bitwarden-systemd (AUR) - Optional systemd service"
+      - "================================"
