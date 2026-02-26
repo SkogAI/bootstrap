@@ -1,7 +1,11 @@
 ---
 # Packages from pacman
 packages:
+  - dolt
+  - beads-git
+  - lazybeads-git
   - x11-ssh-askpass
+  - nvm
   - ansible
   - ansible-core
   - base
@@ -37,7 +41,9 @@ packages:
   - zip
   - unzip
   - zoxide
+  - tmux
   - zsh
+
 
 # Packages from AUR via yay
 aur_packages:
@@ -46,6 +52,7 @@ aur_packages:
   - neovim-nightly
   - pwvucontrol
   - diff-so-fancy
+  - fabric-ai
   - vesktop
   - lazydocker
   - lazygit
