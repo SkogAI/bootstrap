@@ -2,8 +2,7 @@
 # Packages from pacman
 packages:
   - dolt
-  - beads-git
-  - lazybeads-git
+  - yq
   - x11-ssh-askpass
   - nvm
   - ansible
@@ -56,3 +55,5 @@ aur_packages:
   - vesktop
   - lazydocker
   - lazygit
+  - beads-git
+  - lazybeads-git
