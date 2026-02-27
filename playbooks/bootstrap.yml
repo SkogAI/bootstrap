@@ -15,3 +15,5 @@
       tags: [secrets]
     - role: bitwarden
       tags: [bitwarden]
+    - role: dolt
+      tags: [dolt]

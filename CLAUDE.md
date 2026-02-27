@@ -11,9 +11,10 @@ See @README.md
 
 ## How it works
 
-1. Install and update packages via pacman.
-2. `ansible-vault view ./pat.vault | gh auth login --with-token`
-4. `gh repo clone skogix/secrets ~/.ssh`
+1. Install base deps via pacman (`github-cli uv git`)
+2. Install ansible via `uv tool install ansible-core`
+3. Auth gh: `ansible-vault view ./pat.vault | gh auth login --with-token`
+4. Install ansible collections and run `playbooks/bootstrap.yml`
 
 ## Vault management
 
