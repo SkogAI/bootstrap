@@ -19,7 +19,7 @@
   become_user: aur_builder
   ansible.builtin.git:
     repo: 'https://aur.archlinux.org/yay.git'
-    dest: 'yay'
+    dest: '/home/aur_builder/yay'
     update: true
     version: master
   when: not yay_stat.stat.exists
@@ -29,13 +29,13 @@
   become_user: aur_builder
   ansible.builtin.command:
     cmd: makepkg -si --noconfirm --noprogressbar
-    chdir: yay
+    chdir: /home/aur_builder/yay
     creates: /usr/bin/yay
   when: not yay_stat.stat.exists
 
 - name: Clean up yay build directory
   become: true
   ansible.builtin.file:
-    path: yay
+    path: /home/aur_builder/yay
     state: absent
   when: not yay_stat.stat.exists
