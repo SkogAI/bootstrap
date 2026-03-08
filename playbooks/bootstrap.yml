@@ -17,3 +17,5 @@
       tags: [bitwarden]
     - role: dolt
       tags: [dolt]
+    - role: claude
+      tags: [claude]
