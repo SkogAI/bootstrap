@@ -16,7 +16,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Auth gh
 log "Authenticating gh..."
-ansible-vault view ./pat.vault --vault-password-file ./pat.password.example | gh auth login --with-token
+ANSIBLE_VAULT_PASSWORD_FILE=./pat.password.example ansible-vault view ./pat.vault | gh auth login --with-token
 gh auth setup-git
 gh auth status
 
