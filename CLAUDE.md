@@ -51,7 +51,8 @@ bootstrap/
 │   ├── Dockerfile         # bare arch container simulating archinstall
 │   ├── docker-compose.yml # runs soft-serve test container
 │   └── run.sh             # single entry point for dev testing
-└── tmp/                   # ansible collections installed here
+├── tmp/                   # ansible collections installed here
+└── .claude/skills/        # Claude Code skills (dev-test, vault-ops, ansible-check, ansible-core)
 ```
 
 </structure>
