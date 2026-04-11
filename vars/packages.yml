@@ -1,12 +1,12 @@
 ---
 # Packages from pacman
 packages:
-  - picom
-  - redshift
-  - dex
-  - dunst
-  - xss-lock
-  - feh
+  # - picom
+  # - redshift
+  # - dex
+  # - dunst
+  # - xss-lock
+  # - feh
   - btop
   - dolt
   - yq
@@ -54,19 +54,8 @@ packages:
 
 # Packages from AUR via yay
 aur_packages:
-  - claude-code
   - google-chrome
-  - neovim-nightly
-  - pwvucontrol
-  - fabric-ai
-  - xdotool
-  - nvm
-  - vesktop
-  - lazydocker
   - lazygit
-  - beads-git
-  - zed
-  - lazybeads-git
   - rbw
   - rofi
   - rofi-rbw

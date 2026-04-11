@@ -11,16 +11,16 @@ sudo pacman -S --needed --noconfirm github-cli uv git
 
 # Setup ansible via uv
 log "Setting up ansible..."
-uv tool install ansible-core
+uv tool install ansible-core --force
 export PATH="$HOME/.local/bin:$PATH"
 
 # Auth gh
 log "Authenticating gh..."
-ANSIBLE_VAULT_PASSWORD_FILE=./pat.password.example ansible-vault view ./pat.vault.test | gh auth login --with-token
+ANSIBLE_VAULT_PASSWORD_FILE=./pat.password ansible-vault view ./pat.vault | gh auth login --with-token
 gh auth setup-git
 gh auth status
 
 # Install ansible collections and run playbook
 log "Running ansible..."
-ansible-galaxy collection install -r .requirements.yml
+ansible-galaxy collection install -r .requirements.yml --force
 ansible-playbook playbooks/bootstrap.yml
