@@ -1,12 +1,12 @@
 ---
 # Packages from pacman
 packages:
-  # - picom
-  # - redshift
-  # - dex
-  # - dunst
-  # - xss-lock
-  # - feh
+  - picom
+  - redshift
+  - dex
+  - dunst
+  - xss-lock
+  - feh
   - btop
   - dolt
   - yq
@@ -16,49 +16,86 @@ packages:
   - ansible-core
   - base
   - base-devel
-  - bat
-  - direnv
-  - dunst
-  - feh
-  - firefox
-  - fzf
   - git
   - github-cli
-  - kitty
-  - less
-  - just
-  - mandoc
-  - ncspot
-  - network-manager-applet
-  - networkmanager
-  - nvm
-  - picom
-  - python-uv
-  - ripgrep
-  - tree
-  - unzip
   - uv
-  - wget
-  - wireplumber
-  - xclip
-  - xdotool
-  - jq
+  - ansible
+  - ansible-core
+  # shell + terminal
+  - zsh
+  - tmux
+  - kitty
+  - direnv
+  - fzf
+  - zoxide
+  # cli essentials
+  - bat
+  - ripgrep
   - fd
+  - jq
+  - yq
+  - tree
+  - less
+  - wget
   - zip
   - unzip
-  - zoxide
-  - tmux
-  - zsh
-  - pinentry
+  # system
+  - networkmanager
   - gnupg
+  - pinentry
+  - dolt
+
+# optional pacman packages (desktop, gui, etc) — commented out for clean bootstrap test
+# - picom
+# - redshift
+# - dex
+# - dunst
+# - feh
+# - btop
+# - x11-ssh-askpass
+# - firefox
+# - mandoc
+# - ncspot
+# - network-manager-applet
+# - python-uv
+# - wireplumber
+# - xclip
+# - xdotool
+# - nvm
 
 # Packages from AUR via yay
 aur_packages:
+  - claude-code
   - google-chrome
+  - neovim-nightly
+  - pwvucontrol
+  - fabric-ai
+  - xdotool
+  - nvm
+  - vesktop
+  - lazydocker
   - lazygit
+  - beads-git
+  - zed
+  - lazybeads-git
   - rbw
-  - rofi
-  - rofi-rbw
-  - bitwarden-systemd
-  - brave
-  - brave-extension-bitwarden-git
+  - lazygit
+  - lazydocker
+
+# optional AUR packages — commented out for clean bootstrap test
+# - claude-code
+# - google-chrome
+# - neovim-nightly
+# - pwvucontrol          # broken: libspa field mismatch with current pipewire headers
+# - fabric-ai
+# - xdotool
+# - nvm
+# - vesktop
+# - beads-git
+# - zed
+# - lazybeads-git
+# - rofi
+# - rofi-rbw
+# - bitwarden-systemd
+# - brave
+# - brave-extension-bitwarden-git
