@@ -24,4 +24,4 @@ gh auth status
 # Install ansible collections and run playbook
 log "Running ansible..."
 ansible-galaxy collection install -r .requirements.yml --force
-ansible-playbook playbooks/bootstrap.yml
+# ansible-playbook playbooks/bootstrap.yml
